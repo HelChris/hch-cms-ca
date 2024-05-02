@@ -80,5 +80,3 @@ export async function getGames() {
 		resultsContainer.appendChild(errorParagraph);
 	}
 }
-
-getGames();
