@@ -1,0 +1,101 @@
+@import "_layout.css";
+@import "_images.css";
+@import "_gamespage.css";
+@import "_typography.css";
+@import "_buttons.css";
+@import "_forms.css";
+@import "_nav.css";
+@import "_hero.css";
+@import "_gamecard.css";
+@import "_themeswitcher.css";
+@import "_mediaqueries.css";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root[data-theme="light"] {
+	--primary-color: #59bed3;
+	--form-fill-color: #b2dcdd;
+	--accent-color: #f0ca00;
+	--success-color: #59d365;
+	--error-color: red;
+
+	--background-body: linear-gradient(
+		355deg,
+		rgba(140, 201, 208, 1) 24%,
+		rgba(197, 245, 251, 1) 63%
+	);
+	--game-category-background: url(../images/banner-turkis-smal.jpg);
+	--game-category-banner-box-shadow: 0 0 10px 5px rgba(89, 190, 211, 1);
+	--game-category-banner-background-color: none;
+	--gamehub-banner-small: url("../images/gamehub-universe-of-games-banner-small.jpg");
+	--background-footer: url("/images/footer-banner.jpg");
+	--background-nav-wrapper: rgba(255, 255, 255, 0.8);
+	--background-content-wrapper: rgba(9, 148, 218, 0.158);
+	--color-nav-link-icon: #000;
+
+	--button-background-color: #fff;
+	--button-border-color: #000;
+
+	--headline-color: #000;
+	--copy-color: #3c3a47;
+	--muted-copy-color: #b1b0b5;
+	--copy-color-hover: #f5f5f6;
+	--h2-game-category: #000;
+	--popular-now-background-color: none;
+	--heroh1-background-color: none;
+
+	--switch-bg: #f5f5f6;
+	--switch-circle-bg: #ffd371;
+	--switch-circle-pos: 0.4rem;
+	--icon-sun: #997f44;
+	--icon-moon: #b1b0b5;
+}
+
+:root[data-theme="dark"] {
+	--primary-color: #9c0db5;
+	--form-fill-color: #b2dcdd;
+	--accent-color: #f0ca00;
+	--success-color: #59d365;
+	--error-color: red;
+
+	--background-body: url("/images/cosmo2-dark.jpg");
+	--game-category-background: #3c3a47;
+	--game-category-banner-box-shadow: 0 0 10px 5px rgba(89, 190, 211, 1);
+	--game-category-banner-background-color: hsla(48, 11%, 9%, 0.75);
+	--gamehub-banner-small: url("/images/gamehub-banner-small-dark.png");
+	--background-footer: #24232a;
+	--background-nav-wrapper: rgba(0, 0, 0, 0.8);
+	--background-content-wrapper: rgba(62, 61, 61, 0.7);
+	--color-nav-link-icon: #f5f5f6;
+
+	--button-background-color: #212025;
+	--button-border-color: #fff;
+
+	--headline-color: #fff;
+	--copy-color: #f5f5f6;
+	--copy-color-hover: #f5f5f6;
+	--muted-copy-color: #b1b0b5;
+	--h2-game-category: #fff;
+	--popular-now-background-color: hsla(48, 11%, 9%, 0.75);
+	--h1-background-color: hsla(48, 11%, 9%, 0.75);
+
+	--switch-bg: #2d2c35;
+	--switch-circle-bg: #7190ff;
+	--switch-circle-pos: 3.2rem;
+	--icon-sun: var(--muted-copy-color);
+	--icon-moon: #dce3ff;
+}
+
+:root {
+	--default-border-radius: 15px;
+	--border-radius-cards: 3rem;
+	--default-transition: color 0.3s ease-in-out,
+		background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+		fill 0.3s ease-in-out, transform 0.3s ease-in-out;
+	--font-fancy: kingdom;
+	--font-regular: Source-Sans-3, sans-serif;
+}

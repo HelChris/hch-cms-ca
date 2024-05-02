@@ -1,0 +1,24 @@
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding-top: 0.5rem;
+}
+.nav-items {
+	justify-content: center;
+	padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+	border-width: 2.3px;
+}
+.nav-items:hover {
+	background-color: var(--primary-color);
+	color: var(--copy-color-hover);
+	border-radius: 1rem;
+}
+.nav-wrapper {
+	display: flex;
+	align-items: center;
+	background: var(--background-nav-wrapper);
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}

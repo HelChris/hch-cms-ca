@@ -1,0 +1,117 @@
+@font-face {
+	font-family: kingdom;
+	src: local(kingdom), url("../fonts/kingdom.ttf") format("truetype");
+}
+@font-face {
+	font-family: AzeretMono-Light;
+	src: local(AzeretMono-Light),
+		url("../fonts/AzeretMono-Light.ttf") format("truetype");
+}
+@font-face {
+	font-family: Source-Sans-3;
+	src: url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+}
+word-break {
+	word-break: break-all;
+}
+.error {
+	color: red;
+	font-weight: bolder;
+}
+.success-icon {
+	color: #59d365;
+	font-size: 9rem;
+}
+body {
+	font-family: var(--font-regular);
+}
+h1,
+h2,
+h3,
+a {
+	font-family: var(--font-fancy);
+	color: var(--copy-color);
+}
+p {
+	font-family: var(--font-regular);
+	color: var(--copy-color);
+}
+li {
+	list-style: none;
+	text-decoration: none;
+}
+label {
+	color: var(--copy-color);
+}
+h1,
+h2 {
+	text-decoration-line: underline;
+	text-decoration-thickness: 3px;
+	text-decoration-color: #f0ca00;
+	color: var(--copy-color);
+	text-transform: uppercase;
+	font-size: 32px;
+	letter-spacing: 0.2rem;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+}
+h2 {
+	text-decoration: none;
+}
+a {
+	color: var(--color-nav-link-icon);
+	padding: 0.2rem;
+	text-align: center;
+	text-decoration: none;
+	list-style-type: none;
+}
+.popular {
+	text-align: center;
+}
+footer li {
+	display: inline-block;
+	text-decoration: none;
+}
+.footer-some li a:hover {
+	color: darkcyan;
+}
+.heroh1 {
+	color: var(--headline-color);
+	text-shadow: #fc0 1px 0 8px;
+	background-color: var(--h1-background-color);
+	border-radius: 60px;
+}
+.games-h1,
+.popular {
+	background-color: var(--h1-background-color);
+}
+.cart-h1,
+.popular,
+.game-category-banner {
+	text-decoration: none;
+	font-size: x-large;
+}
+.cart-h1 {
+	justify-content: flex-start;
+	padding-left: 0.5rem;
+}
+.h2-about {
+	font-size: 18px;
+}
+.sign-in-h2 {
+	font-size: 1.2rem;
+	display: flex;
+	justify-content: left;
+	padding: 0.5rem 0;
+}
+.game-category-banner {
+	display: flex;
+	justify-content: flex-start;
+}
+.forgotten-password {
+	text-decoration: underline;
+}
+.text {
+	color: var(--copy-color);
+}

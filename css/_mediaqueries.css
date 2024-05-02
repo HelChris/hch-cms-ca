@@ -1,0 +1,152 @@
+@media (max-width: 800px) {
+	h1 {
+		display: flex;
+		justify-content: center;
+	}
+	.details-and-buttons {
+		padding: 0;
+	}
+	.bg-image-wrapper {
+		background-image: url(../images/hero-v5.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
+		min-height: 100vh;
+		height: 160vh;
+	}
+	.hero-button-h1-wrapper {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		top: 60vh;
+	}
+	.hero-button-wrapper,
+	.category-navigation {
+		padding-top: 1rem;
+		justify-content: center;
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.content-wrapper,
+	.gamecard-wrapper-details {
+		max-width: 500px;
+		display: flex;
+		justify-content: center;
+	}
+	.gamecard-wrapper-details{
+		flex-wrap: wrap;
+	}
+	.game-category-section {
+		justify-content: center;
+	}
+	@media (max-width: 600px) {
+		h1 {
+			display: flex;
+			justify-content: center;
+		}
+		.product-list {
+			max-width: 90%;
+			margin: 0 auto;
+		}
+		.content-wrapper,
+		.gamecard-wrapper-details {
+			max-width: 400px;
+			display: flex;
+			justify-content: center;
+		}
+		.gamecard-wrapper-details{
+		flex-wrap: wrap;
+	}
+		.game-category-section {
+			justify-content: center;
+			padding-left: 1rem;
+		}
+		.pay-ship {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	@media (max-width: 400px) {
+		.nav-wrapper {
+			display: flex;
+			max-width: 100%;
+		}
+		nav,
+		.nav-items {
+			gap: 0;
+			padding: 0;
+		}
+		#theme-switcher {
+			margin: 0;
+		}
+		.product-list,
+		.gamecard-wrapper-details {
+			display: flex;
+			flex-direction: column;
+			max-width: 95vw;
+		}
+		.gamecard-wrapper-details{
+		flex-wrap: wrap;
+	}
+		.game-category-section {
+			justify-content: center;
+			max-width: 95vw;
+			padding-left: 1rem;
+		}
+		.details-and-buttons {
+			max-width: 95vw;
+			margin: 0 auto;
+			padding: 0.5rem;
+		}
+		.gamecard-buttons {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.gamecard-image {
+			max-width: 80vw;
+			border-radius: var(--default-border-radius);
+		}
+		h1 {
+			display: flex;
+			justify-content: center;
+		}
+		.pay-ship {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.checkout-buttons {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.cart-buttons {
+			display: flex;
+			flex-direction: column;
+		}
+		.bg-image-wrapper {
+			background-image: url(../images/hero-v5.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align: center;
+			min-height: 100vh;
+			height: 155vh;
+		}
+		.hero-button-h1-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+			position: relative;
+			top: 30vh;
+		}
+		.hero-button-wrapper,
+		.category-navigation {
+			justify-content: center;
+			align-content: center;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+		}
+	}
+}

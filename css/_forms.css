@@ -1,0 +1,46 @@
+.form-input {
+	background-color: #d1fbfc;
+	border: none;
+	border-radius: 0px;
+	line-height: 2.5em;
+	text-align: left;
+	padding-left: 0.3rem;
+	margin: 0.3rem 0;
+	min-width: 100%;
+}
+.contact-form-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.signin-buttons {
+	display: flex;
+	flex-direction: row;
+	padding-top: 1rem;
+	justify-content: center;
+	align-items: center;
+}
+.contact-form,
+.sign-in-form {
+	display: flex;
+	flex-direction: column;
+	width: 20rem;
+	margin: 0 auto;
+}
+.shipping-form,
+.payment-form {
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+}
+.message-field {
+	height: 10rem;
+}
+.payment,
+.shipping {
+	padding: 1rem;
+}
+.radio-form {
+	padding: 0 0 1rem 0;
+}

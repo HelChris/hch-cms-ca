@@ -1,0 +1,50 @@
+.button {
+	border-width: 2.3px;
+	border-style: solid;
+	border-color: var(--button-border-color);
+	border-radius: 7rem;
+	min-width: 151px;
+	max-height: 50px;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 120%;
+	padding: 0.8rem;
+	text-decoration: none;
+	margin: 0.2rem;
+}
+.button:hover {
+	text-decoration: underline;
+	background: var(--primary-color);
+}
+.button-white {
+	background-color: var(--button-background-color);
+	color: var(--copy-color);
+}
+.button-turquoise {
+	background-color: var(--primary-color);
+	color: var(--copy-color);
+}
+.button-turquoise:hover {
+	background-color: var(--button-background-color);
+}
+/* .search-button {
+	border: none;
+	background-color: var(--form-fill-color);
+} */
+.checkout-buttons,
+.all-games-button,
+.cart-buttons,
+.success-button,
+.contact-button {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	text-align: center;
+}
+.checkout-buttons {
+	padding-top: 1rem;
+}
+.all-games-button {
+	padding: 2rem 0 1rem 0;
+}

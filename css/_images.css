@@ -1,0 +1,29 @@
+.logo-gamehub-png {
+	float: left;
+	max-width: 90%;
+	padding: 1rem;
+}
+.about-img,
+.contact-img {
+	max-width: 100%;
+	padding: 1rem;
+}
+.gamehub-logobanner-small {
+	background-image: var(--gamehub-banner-small);
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+.success-icon {
+	display: flex;
+	justify-content: center;
+}
+.image-wrapper {
+	display: flex;
+	justify-content: center;
+}
+.gamecard-image {
+	padding-bottom: 0.5rem;
+	max-width: 300px;
+	border-radius: var(--default-border-radius);
+}

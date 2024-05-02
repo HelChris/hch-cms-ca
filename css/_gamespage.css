@@ -1,0 +1,31 @@
+.game-category-banner {
+	background-image: var(--game-category-background);
+	background-repeat: no-repeat;
+	box-shadow: var(--game-category-banner-box-shadow);
+	background-color: var(--game-category-banner-background-color);
+	text-align: left;
+	color: var(--h2-game-category);
+	background-size: cover;
+	padding: 0.5rem 0.5rem 0.5rem 3rem;
+}
+.game-category-section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 2rem;
+	padding: 1rem 0rem 1rem 2rem;
+}
+.category-navigation {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	padding-bottom: 1rem;
+}
+.product-list {
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
+	gap: 2rem;
+	justify-content: center;
+}
