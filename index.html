@@ -26,7 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
     rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet" />
-  <script src="./js/main.js" type="module"></script>
+  <script src="js/ui/app.mjs" type="module"></script>
 </head>
 
 <body>
@@ -84,13 +84,16 @@
     <section class="main-container">
       <div class="gamehub-logobanner-small" role="img" aria-label="GameHub, The universe of games"></div>
       <h2 class="popular">POPULAR RIGHT NOW</h2>
-      <div class="product-list loading-box" id="container">
+      <div class="product-list loading-box" id="games-container">
         <div class="spinner"></div>
         <p>Loading..</p>
       </div>
       <div class="all-games-button">
         <a href="games.html" class="button button-white">Take me to all the games
         </a>
+      </div>
+      <div id="thumbnails-container">
+
       </div>
     </section>
   </main>
