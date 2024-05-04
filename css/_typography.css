@@ -7,10 +7,6 @@
 	src: local(AzeretMono-Light),
 		url("../fonts/AzeretMono-Light.ttf") format("truetype");
 }
-@font-face {
-	font-family: Source-Sans-3;
-	src: url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-}
 word-break {
 	word-break: break-all;
 }
