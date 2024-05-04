@@ -1,8 +1,14 @@
-import { url } from "./constants.mjs";
+import { url } from "/js/constants.mjs";
+
+console.log(`Fetching from URL: ${url}`); // Log the URL you're fetching from
 
 export async function getGames() {
 	try {
-		const response = await fetch(url);
+		const response = await fetch(url, {
+			headers: {
+				Origin: "https://helenech.com/gamehub/wp-json/wc/store/products",
+			},
+		});
 
 		if (!response.ok) {
 			throw new Error("HTTP Error! status: ${response.status}");
