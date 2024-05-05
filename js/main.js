@@ -1,7 +1,9 @@
 import { getGames } from "./getGames.mjs";
+import { getThumbnails } from "./getThumbnails.mjs";
 
 // get the games to the index site
 getGames();
+getThumbnails();
 
 //switch function
 const switchTheme = () => {

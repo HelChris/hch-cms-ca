@@ -36,6 +36,17 @@ footer {
 	align-items: center;
 	justify-content: center;
 }
+
+.thumbnails {
+	display: flex;
+	flex-direction: column;
+}
+.thumbnails-images {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 3rem;
+	
+}
 .spinner {
 	height: 120px;
 	width: 120px;
