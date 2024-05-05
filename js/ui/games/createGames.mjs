@@ -13,9 +13,9 @@ export function createGames(container, games) {
 		imgLink.href = `gamedetail.html?id=${game.id}`;
 
 		const img = document.createElement("img");
-		img.src = game.image;
+		img.src = game.images[0].src;
 		img.className = "gamecard-image";
-		img.alt = game.title;
+		img.alt = game.name;
 
 		imgLink.appendChild(img);
 		imageWrapper.appendChild(imgLink);
@@ -24,12 +24,12 @@ export function createGames(container, games) {
 		gameCardCopy.className = "gamecard-copy";
 		gameCard.appendChild(gameCardCopy);
 
-		const title = document.createElement("h3");
-		title.textContent = game.title;
-		gameCardCopy.appendChild(title);
+		const name = document.createElement("h3");
+		name.textContent = game.name;
+		gameCardCopy.appendChild(name);
 
 		const price = document.createElement("p");
-		price.textContent = "$" + game.price;
+		price.textContent = `$${game.prices.price / 100}`;
 		gameCardCopy.appendChild(price);
 
 		const genre = document.createElement("p");
@@ -44,14 +44,14 @@ export function createGames(container, games) {
 		readMore.href = "gamedetail.html?id=" + game.id;
 		readMore.className = "button button-white";
 		readMore.textContent = "Game details";
-		readMore.setAttribute("aria-label", `Read more about ${game.title}`);
+		readMore.setAttribute("aria-label", `Read more about ${game.name}`);
 		gameCardButtons.appendChild(readMore);
 
 		const addToCart = document.createElement("a");
 		addToCart.href = "cart.html";
 		addToCart.className = "button button-turquoise";
 		addToCart.textContent = "Add to cart";
-		addToCart.setAttribute("aria-label", `Add ${game.title} to cart`);
+		addToCart.setAttribute("aria-label", `Add ${game.name} to cart`);
 		gameCardButtons.appendChild(addToCart);
 
 		container.appendChild(gameCard);

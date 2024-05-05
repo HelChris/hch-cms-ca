@@ -22,9 +22,19 @@ document
 	.querySelector("#theme-switcher")
 	.addEventListener("click", switchTheme);
 
+Object.groupBy = function (arr, keyFunc) {
+	return arr.reduce((acc, obj) => {
+		let key = keyFunc(obj);
+		if (!acc[key]) {
+			acc[key] = [];
+		}
+		acc[key].push(obj);
+		return acc;
+	}, {});
+};
 
 //all the games sorted by category::
-async function getGames() {
+async function getGamesSorted() {
 	try {
 		const response = await fetch(url);
 
@@ -34,27 +44,35 @@ async function getGames() {
 
 		const games = await response.json();
 
-		const groupedGames = Object.groupBy(games, (game) => game.genre);
+		const groupedGames = Object.groupBy(games, (game) => {
+			const genreAttribute = game.attributes.find(
+				(attr) => attr.name === "Genre"
+			);
+			return genreAttribute ? genreAttribute.terms[0].name : null;
+		});
 
-		const actionContainer = document.querySelector("#action-games");
-		createGames(actionContainer, groupedGames.Action);
+		if (groupedGames.Action) {
+			const actionContainer = document.querySelector("#action-games");
+			createGames(actionContainer, groupedGames.Action);
+		}
 
-		const horrorContainer = document.querySelector("#horror-games");
-		createGames(horrorContainer, groupedGames.Horror);
+		if (groupedGames.Horror) {
+			const horrorContainer = document.querySelector("#horror-games");
+			createGames(horrorContainer, groupedGames.Horror);
+		}
 
-		const sportsContainer = document.querySelector("#sports-games");
-		createGames(sportsContainer, groupedGames.Sports);
+		if (groupedGames.Sports) {
+			const sportsContainer = document.querySelector("#sports-games");
+			createGames(sportsContainer, groupedGames.Sports);
+		}
 
-		const adventureContainer = document.querySelector("#adventure-games");
-		createGames(adventureContainer, groupedGames.Adventure);
+		if (groupedGames.Adventure) {
+			const adventureContainer = document.querySelector("#adventure-games");
+			createGames(adventureContainer, groupedGames.Adventure);
+		}
 	} catch (error) {
-		console.error("Error fetching games:", error);
-		const resultsContainer = document.querySelector("#container");
-		resultsContainer.innerHTML = "";
-		const errorParagraph = document.createElement("p");
-		errorParagraph.className = "error";
-		errorParagraph.textContent = `Oh no! An error has occured: "${error.message}"`;
-		resultsContainer.appendChild(errorParagraph);
+		console.log(error);
 	}
 }
-getGames();
+
+getGamesSorted();
