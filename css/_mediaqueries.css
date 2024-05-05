@@ -1,3 +1,9 @@
+@media (min-width: 900px) {
+	.thumbnails-images {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
 @media (max-width: 800px) {
 	h1 {
 		display: flex;
@@ -34,11 +40,15 @@
 		display: flex;
 		justify-content: center;
 	}
-	.gamecard-wrapper-details{
+	.gamecard-wrapper-details {
 		flex-wrap: wrap;
 	}
 	.game-category-section {
 		justify-content: center;
+	}
+	.thumbnails-images {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 	}
 	@media (max-width: 600px) {
 		h1 {
@@ -55,9 +65,9 @@
 			display: flex;
 			justify-content: center;
 		}
-		.gamecard-wrapper-details{
-		flex-wrap: wrap;
-	}
+		.gamecard-wrapper-details {
+			flex-wrap: wrap;
+		}
 		.game-category-section {
 			justify-content: center;
 			padding-left: 1rem;
@@ -66,6 +76,10 @@
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
+		}
+		.thumbnails-images {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 	@media (max-width: 400px) {
@@ -87,9 +101,9 @@
 			flex-direction: column;
 			max-width: 95vw;
 		}
-		.gamecard-wrapper-details{
-		flex-wrap: wrap;
-	}
+		.gamecard-wrapper-details {
+			flex-wrap: wrap;
+		}
 		.game-category-section {
 			justify-content: center;
 			max-width: 95vw;
@@ -147,6 +161,10 @@
 			display: flex;
 			flex-wrap: wrap;
 			gap: 1rem;
+		}
+		.thumbnails-images {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
 		}
 	}
 }

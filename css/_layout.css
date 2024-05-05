@@ -39,14 +39,62 @@ footer {
 
 .thumbnails {
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: column;
 }
 .thumbnails-images {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 3rem;
-	
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 }
+
+.thumbnail-image {
+	max-width: 150px;
+}
+.thumbnail-image:hover {
+	max-width: 150px;
+
+	animation-name: bounce-top;
+	animation-duration: 1.2s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+}
+
+@keyframes bounce-top {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-24px);
+	}
+	55% {
+		transform: translateY(0);
+	}
+	65% {
+		transform: translateY(-12px);
+	}
+	75% {
+		transform: translateY(0);
+	}
+	82% {
+		transform: translateY(-6px);
+	}
+	87% {
+		transform: translateY(0);
+	}
+	93% {
+		transform: translateY(-4px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
 .spinner {
 	height: 120px;
 	width: 120px;

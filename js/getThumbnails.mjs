@@ -13,20 +13,20 @@ export async function getThumbnails() {
 		resultsContainer.innerHTML = "";
 
 		games.forEach((game) => {
-			const section = document.createElement("section");
-			section.className = "thumbnails";
-			resultsContainer.appendChild(section);
+			const div = document.createElement("div");
+			div.className = "thumbnails";
+			resultsContainer.appendChild(div);
 
 			const imageWrapper = document.createElement("div");
 			imageWrapper.className = "image-wrapper";
-			section.appendChild(imageWrapper);
+			div.appendChild(imageWrapper);
 
 			const imgLink = document.createElement("a");
 			imgLink.href = `gamedetail.html?id=${game.id}`;
 
 			const img = document.createElement("img");
 			img.src = game.images[0].thumbnail;
-			img.className = "gamecard-image";
+			img.className = "thumbnail-image";
 			img.alt = game.name;
 
 			imgLink.appendChild(img);
