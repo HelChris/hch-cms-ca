@@ -29,9 +29,9 @@ export async function getGames() {
 			imgLink.href = `gamedetail.html?id=${game.id}`;
 
 			const img = document.createElement("img");
-			img.src = game.image;
+			img.src = game.images[0].src;
 			img.className = "gamecard-image";
-			img.alt = game.title;
+			img.alt = game.name;
 
 			imgLink.appendChild(img);
 			imageWrapper.appendChild(imgLink);
@@ -40,12 +40,12 @@ export async function getGames() {
 			gameCardCopy.className = "gamecard-copy";
 			gameCard.appendChild(gameCardCopy);
 
-			const title = document.createElement("h3");
-			title.textContent = game.title;
-			gameCardCopy.appendChild(title);
+			const name = document.createElement("h3");
+			name.textContent = game.name;
+			gameCardCopy.appendChild(name);
 
 			const price = document.createElement("p");
-			price.textContent = `$${game.price}`;
+			price.textContent = `$${game.prices.price / 100}`; 
 			gameCardCopy.appendChild(price);
 
 			const genre = document.createElement("p");
