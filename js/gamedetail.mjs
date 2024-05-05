@@ -56,9 +56,9 @@ async function getGame() {
 		gameCardWrapper.appendChild(imageWrapper);
 
 		const img = document.createElement("img");
-		img.src = game.image;
+		img.src = game.images[0].src;
 		img.className = "gamecard-image";
-		img.alt = game.title;
+		img.alt = game.name;
 		imageWrapper.appendChild(img);
 
 		const detailsAndButton = document.createElement("div");
@@ -69,13 +69,18 @@ async function getGame() {
 		gameDetailDiv.className = "gamedetail";
 		detailsAndButton.appendChild(gameDetailDiv);
 
+		function getAttributeValue(game, attributeName) {
+			const attribute = game.attributes.find(attr => attr.name === attributeName);
+			return attribute ? attribute.terms[0].name : 'N/A';
+		}
+
 		// append game details
 		const details = [
-			{ tag: "h1", text: `${game.title}` },
-			{ tag: "p", text: `Price: $${game.price}` },
-			{ tag: "p", text: `Genre: ${game.genre}` },
-			{ tag: "p", text: `Released: ${game.released}` },
-			{ tag: "p", text: `Age: ${game.ageRating}` },
+			{ tag: "h1", text: `${game.name}` },
+			{ tag: "p", text: `Price: $${game.prices.price / 100}` },
+			{ tag: "p", text: `Genre: ${game.categories[0].name}` },
+			{ tag: "p", text: `Released: ${getAttributeValue(game, 'Released')}` },
+			{ tag: "p", text: `Age: ${getAttributeValue(game, 'Age')}` },
 			{ tag: "p", text: game.description, className: "game-description" },
 		];
 
