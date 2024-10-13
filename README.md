@@ -1,4 +1,4 @@
-(images/gamehub-universe-of-games-banner-small.jpg)
+![](images/gamehub-universe-of-games-banner-small.jpg)
 # Cross-course Project: GameHub - the universe of games
 
 GameHub is an online shop where users can purchase computer games. This gaming marketplace lets you buy tons of video games online for any device. Target audience: Aged 18 to 25 who are interested in computer games, and would either like to purchase games or would like to sell games they have finished playing. (https://hch-cms-ca.netlify.app/)
